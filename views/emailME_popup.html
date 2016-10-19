@@ -1,0 +1,32 @@
+<div id="emailME_popup" class="popupContainer">		
+	<div class="daBackground"></div>
+
+	<div class="thePopup">
+		<div class="defaultPopupIcon" onclick="javascript: popupManager.close('emailME');"></div>
+				
+		<form name="contactMe" method="post" action="/mail/" class="" novalidate>
+			<div class="anInput"><label for="name">Name</label> <input type="text" name="name" required="" x-webkit-speech></div>
+							
+			<div class="anInput"><label for="email">Email</label> <input type="email" name="email" required=""></div>
+			
+			<div class="anInput"><label for="subject">Subject</label> <input type="text" name="subject" x-webkit-speech></div>
+			
+			<div class="anInput">	
+				<label for="message">Message</label>
+				<textarea name="message" required="" style="display: block; width: 98%; height: 200px;"></textarea>
+			</div>
+
+			<div class="anInput">
+				<!-- <label for="submit-key">Please enter phase</label> -->
+
+				<canvas id="submit-key"></canvas>
+
+				<input type="text" name="submit-key" placeholder="Please enter phase above!!!">
+			</div>			
+
+			<div style="text-align: center;">
+				<input type="submit" value="Send Email" style="font-weight: bold;">
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,92 @@
+<style type="text/css">
+.teeJay{font-family: Verdana, Geneva, sans-serif; font-size: 14px; color: #000000; line-height: 100%;}
+	
+.teeJay{width: 750px; margin: auto; line-height: 100%;}
+	.teeJay .header{text-align: left; margin-top: 10px; margin-bottom: 25px;}
+		.teeJay .header #title{font-size: 2.5em; word-spacing: 10px; font-weight: normal; text-shadow: -5px 5px 5px #BFBFBF; text-align: center; margin: 0px;}
+
+		.teeJay #menu ul.dropdown{position: relative; z-index: 597;}
+		.teeJay #menu ul.dropdown li{line-height: 1.2em; vertical-align: middle; zoom: 1;}
+		.teeJay #menu ul.dropdown li:hover{position: relative; z-index: 599;}
+		.teeJay #menu ul.dropdown ul{visibility: hidden; display: none; position: absolute; top: 100%; left: 0; z-index: 598;}
+		.teeJay #menu ul.dropdown li:hover > ul{visibility: visible; display: inherit; border: 0px;}		
+
+		.teeJay #menu{min-height: 30px; font-size: 1.1em; text-shadow: -5px 5px 5px #BFBFBF;}
+			.teeJay #menu ul{list-style: none; padding: 0px; margin: 0px; text-align: center;}
+			.teeJay #menu li{display: inline; padding-left: 2px; padding-right: 4px; margin: 0px; white-space: nowrap; cursor: pointer;} 
+				.teeJay #menu li:first-child{padding-left: 0em;}
+				.teeJay #menu li:hover{background: #F5F5F5;}
+				.teeJay #menu li a{color: #000000; text-decoration: none; cursor: pointer;}
+			
+			.teeJay #menu ul li ul{border: 0px; margin: 0px; background: #DCDCDC; text-align: left;}		
+				.teeJay #menu ul li ul li{display: block; padding: 0px 10px; background: #DCDCDC; white-space: nowrap; cursor: pointer;}
+					.teeJay #menu li ul li:first-child{padding-left: 10px;}		
+						
+		.teeJay #content{word-wrap: break-word; margin-top: -15px;}
+			.teeJay .nameOfSlide{font-size: 3em; font-weight: bold; line-height: 100%;}
+		
+			.teeJay #homePageSlider{width: 100%; height: 460px; border: 0px; line-height: 100%;}
+				.teeJay #homePageSlider .slide{width: 100%; height: 460px; background-size: 100% 100%;}
+					.teeJay #homePageSlider .slide h1{width: auto; font-size: 40px;}
+					
+						.teeJay #homePageSlider .slidePicker{margin: 0px;}
+						.teeJay #homePageSlider .slidePicker a{width: 6px; height: 6px; border-width: 2px;}
+						.teeJay #homePageSlider .slidePicker a.selected{background-color: gray;}
+				
+		.teeJay #footer{text-align: center; word-wrap: break-word; margin-bottom: 10px;}
+</style>
+
+<div class="teeJay notLiveItem" id="notLive_teeJay">
+	<div class="header"><div id="title">TEE JAY JONES</div></div>
+	
+	<div id="menu">
+		<ul class="dropdown">
+			<li><a>Home</a></li>
+			<li><a>About</a></li>
+			<li>
+				<a>Artwork</a>
+				<ul>
+					<li>Pastels</li>
+					<li>Landscape</li>
+					<li>Portraits</li>
+					<li>Abstracts</li>
+					<li>Sculptures</li>
+					<li>Illustractions</li>
+					<li>Pencil</li>		
+				</ul>	
+			</li>
+			<li><a>Commission</a></li>
+			<li><a>Contact</a></li>
+			<li><a>News</a></li>
+		</ul>
+	</div>
+	<br />
+	<div id="content">
+		<div id="homePageSlider" class="miniSlider" timer="3000">		
+			<div class="slide" style="background-image: url(work/teeJay/photo.jpg);">
+				<div class="nameOfSlide" style="padding-top: 380px; padding-left: 10px; color: gray;">About Me</div>
+			</div>
+			
+			<div class="slide" style="background-image: url(work/teeJay/pastels.jpg);">
+				<div class="nameOfSlide" style="padding-top: 380px; padding-left: 380px;">My Pastels</div>
+			</div>
+			
+			<div class="slide" style="background-image: url(work/teeJay/Drawings.jpg);">
+				<div class="nameOfSlide" style="padding-top: 225px; padding-left: 20px;">My Drawings</div>
+			</div>
+			
+			<div class="slide" style="background-image: url(work/teeJay/ab.jpg);">
+				<div class="nameOfSlide" style="padding-top: 0px; padding-left: 10px;">My</div>
+				<div class="nameOfSlide" style="padding-top: 150px; padding-left: 265px;">Abstract</div>
+				<div class="nameOfSlide" style="padding-top: 100px; padding-left: 670px;">Art</div>
+			</div>
+		
+			
+			<div class="slidePicker"></div>
+		</div>		
+	</div>
+
+	<div id="footer"><a>www.tjayjones.me</a> . AMENIA, NY . ###-#####<br></div>
+</div>
+
+

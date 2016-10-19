@@ -1,0 +1,57 @@
+var popupManager=new Object();
+	popupManager["styler"]=function(popupId) {		
+		var popupEle=$("#"+ popupId +"_popup.popupContainer .thePopup");
+		
+		popupEle.css("left", ($(window).width()-popupEle.width())/2);
+		
+		if (popupEle.height() > $(window).height()) {
+			$("#"+ popupId +"_popup.popupContainer").addClass("abs");
+		}
+		else {
+			$("#"+ popupId +"_popup.popupContainer").removeClass("abs");
+		}
+	};
+			
+	popupManager["open"]=function(popupId) {
+		if (! $("html").hasClass("viewingPopup") && $("#"+ popupId +"_popup.popupContainer").length) {
+			$("html").addClass("viewingPopup viewingPopup_"+ popupId +"");
+			$("#"+ popupId +"_popup.popupContainer").addClass("active");
+			
+			popupManager.styler(popupId);
+		}
+	};	
+	
+	popupManager["close"]=function(popupId) {
+		$("html").removeClass("viewingPopup viewingPopup_"+ popupId +"");
+		$("#"+ popupId +"_popup.popupContainer").removeClass("active");
+	};
+	
+	$(window).on("resize", function() {
+		$("div.popupContainer").each(function() {
+			if ($(this).hasClass("active")) {
+				popupManager.styler($(this).attr("id").replace("_popup", ""));
+			}
+		});
+	});
+	
+	$(window).on("keydown", function(event) {				
+		if  (event.keyCode == 27 && $("html").hasClass("viewingPopup")) {
+			$("div.popupContainer").each(function() {
+				if ($(this).hasClass("active")) {
+					popupManager.close($(this).attr("id").replace("_popup", ""));
+				}
+			});
+		}
+	});
+
+$(window).on("resize", function(event) {
+	$("html").toggleClass("longerThenWin", $(window).height()<$("body").height());
+});
+
+$(document).ready(function() {
+	$(window).trigger("resize");
+	
+	$(".menu a").each(function() {
+	
+	});
+});

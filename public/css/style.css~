@@ -1,0 +1,116 @@
+html{background: #5CCDC9}
+
+a{text-decoration: none;}
+
+h1, h2, h3, h4, h5, h6{margin: 0px;}
+
+ul.noStyle, ol.noStyle{list-style: none; padding: 0px; margin: 0px;}
+
+input:not([type="submit"]):not([type="button"]), textarea{outline: 0px; border: 1px solid; border-radius: .5em;}
+
+.centerText{text-align: center;}
+.noMargins{margin: 0px;}
+
+.container{width: 48.4375em; margin: 1em auto;}
+
+.deckOfCards{}	
+	.deckOfCards .column{display: block; float: left; width: 15.625em; vertical-align: top;}
+		.deckOfCards .middleColumn{margin: 0em 0.625em;}
+		.deckOfCards .column[colspan="2"]{width: 31.25em}
+		.deckOfCards .column[colspan="3"]{width: 100%;}
+		
+	.deckOfCards .card{background: #FFCF72; padding: .4em; margin-bottom: 1em; border-radius: 1em;}
+		.deckOfCards .card.noStyle{background: none;}
+		.innerCorners{border-radius: 1em 1em 1em 0px;}
+	
+.menu{font-size: 1.1em; padding: 0px; margin: 0px; font-weight: bold;}
+	.menu a{
+		display: block; width: 98%; margin: 0em auto .5em auto;
+		background: #C6E2FF; border-radius: 10px; 
+		text-align: center; color: #000; text-decoration: none;
+	}
+	
+	.menu a:last-of-type{margin-bottom: 0px;}
+	.menu a:hover{color: #FFFFFF; background: #FF9900;}
+	.menu a.onIt{display: none;}
+
+#topLink{display: none; text-align: center; font-size: 1.4em; margin-bottom: 1em; color: #000; text-decoration: none;}
+	html.longerThenWin #topLink{display: block;}
+	#topLink:hover{text-decoration: underline;}
+	
+/* Popups */
+.popupContainer{display: none;}
+	.popupContainer .thePopup{position: fixed; top: 2em;}
+		.popupContainer.abs .thePopup{position: absolute;}
+	
+	.popupContainer .daBackground{width: 100%; height: 100%; position: fixed; top: 0px; left: 0px;}
+
+.popupContainer.active{display: block;}
+
+.defaultPopupIcon{
+	width: 100%; height: 36px; display: block; 
+	position: relative; top: 6px; margin-top: -36px;
+	background: url(../images/overlayClose.png) no-repeat 100% 100%; background-position: 50% 0%;
+}
+
+	.defaultPopupIcon[align="left"]{background-position: 0% 0%; left: -30px;}
+	.defaultPopupIcon[align="right"]{background-position: 100% 0%; right: -30px;}
+
+.thePopup{width: 20em; margin-bottom: 1em; padding: .25em; background: #FFFFFF; border: 10px solid #1E8581; border-radius: 1em;}
+
+#emailME_popup .thePopup{width: 18em;} 
+
+form[name="contactMe"] .anInput{display: table-row;  }
+
+form[name="contactMe"] .anInput label{display: table-cell; padding-right: .24em; padding-bottom: 1em;}
+	form[name="contactMe"] .anInput label:after{content: ": ";}
+
+form[name="contactMe"] .anInput input{display: table-cell;}
+
+/* Timeline */
+article#timeline{}
+	article#timeline aside, article#timeline #tl_content{float: left;}	
+		article#timeline aside{margin-right: 0.625em;}
+			article#timeline aside a{width: 100%;  padding: .25em; font-weight: normal; font-size: .9em;}
+				article#timeline aside a:hover, article#timeline aside a.active{background: #C6E2FF; font-weight: bold; color: #000;}
+		
+		article#timeline #tl_content{float: right; width: 78%;}
+			article#timeline section{padding: .4em; margin-bottom: 1em; background-color: #FFCF72; border-radius: 1em;}
+				article#timeline section:not(.active){display: none;}
+				article#timeline section.active{display: block;}
+				
+	/* THE CONTENT */				
+	article#timeline .nameOfSection{text-align: center;}
+	article#timeline img{max-width: 100%;}
+
+	section#the_remembered li{clear: both; margin-bottom: 1em;}
+	section#the_remembered img{width: 11.25em; max-width: 345px; max-height: 250px; padding: 0em .8em 0em 0em; vertical-align: top; border-radius: 1em 0em 0em 1em;}
+
+	section#places li{text-align: center;}
+
+	section#places img{width: 32%; height: 10em; display: inline; border-radius: 1em 0em 1em 0em;}
+		section#places img:hover{border-radius: 0em 1em 0em 1em;}
+
+/* Portfolio */
+.anItem{color: #000; text-align: center;}
+.anItem p{display: block; border: .375em solid #FFCF72; border-radius: 1em; margin-bottom: 1em;}
+	.anItem p:hover{border-color: #1E8581;}
+	.anItem img{width: 100%; border-radius: .5em;}
+	
+.swm{display: none;}
+
+@media (max-width: 50em) {
+	.swm{display: block;}
+	
+	.hwm{display: none;}
+
+	.container{width: 90%;}
+		.container.deckOfCards{max-width: 20em;}
+			.deckOfCards .column{width: 100%;}
+			.deckOfCards .middleColumn{margin: 0px;}
+	
+	.viewingPopup .container{}
+	
+	.popupContainer .thePopup{position: static;}
+	
+}

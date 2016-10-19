@@ -1,0 +1,132 @@
+
+html{background: #5CCDC9}
+
+body{font-family: 'Courier New', Courier, monospace;}
+
+a{text-decoration: none;}
+
+h1, h2, h3, h4, h5, h6{margin-top: 0px;}
+
+ul.noStyle, ol.noStyle{list-style: none; padding: 0px; margin: 0px;}
+
+input:not([type="submit"]):not([type="button"]), textarea{outline: 0px; border: 0px; border-bottom: 2px dotted #000; font-weight: bold;}
+
+textarea{border-left: 2px dotted;}
+
+img.picEffectOne{width: 100%; min-height: 10em; border-radius: 1em 1em 1em 0em;}
+
+.centerText{text-align: center;}
+.noMargins{margin: 0px;}
+
+.container{width: 48.4375em; margin: 1em auto;}
+
+.deckOfCards{}	
+	.deckOfCards .column{display: block; float: left; width: 15.625em; vertical-align: top;}
+		.deckOfCards .middleColumn{margin: 0em 0.625em;}
+		.deckOfCards .column[colspan="2"]{width: 31.25em}
+		.deckOfCards .column[colspan="3"]{width: 100%;}
+		
+	.deckOfCards .card{background: #FFCF72; padding: .4em; margin-bottom: 1em; border-radius: 1em;}
+		.deckOfCards .card.noStyle{padding-top: 0em; background: none;}
+	
+.menu{font-size: 1.1em; padding: 0px; margin: 0px; font-weight: bold;}
+	.menu a, .menu .action{
+		display: block; width: 100%; margin-bottom: 0.5em;
+		background: #C6E2FF; border-radius: 10px; 
+		line-height: 1.2; text-align: center; color: #000; text-decoration: none; cursor: pointer;
+	}
+	
+	.menu *:last-child{margin-bottom: 0px;}
+	.menu a:hover, .menu .action:hover{color: #FFFFFF; background: #FF9900;}
+	.menu a.onIt{display: none;}
+
+.page-sent #open_emailMe{display: none;}
+
+#topLink{display: none; text-align: center; font-size: 1.4em; margin-bottom: 1em; color: #000; text-decoration: none;}
+	html.longerThenWin #topLink{display: block;}
+	#topLink:hover{text-decoration: underline;}
+		
+/* Popups */
+.popupContainer{display: none;}
+	.popupContainer .thePopup{position: fixed; top: 2em;}
+		.popupContainer.abs .thePopup{position: absolute;}
+	
+	.popupContainer .daBackground{width: 100%; height: 100%; position: fixed; top: 0px; left: 0px;}
+
+.popupContainer.active{display: block;}
+
+.defaultPopupIcon{
+	width: 100%; height: 36px; display: block; 
+	position: relative; top: 6px; margin-top: -36px;
+	background: url(../images/overlayClose.png) no-repeat 100% 100%; background-position: 50% 0%;
+}
+	.defaultPopupIcon[align="left"]{background-position: 0% 0%; left: -30px;}
+	.defaultPopupIcon[align="right"]{background-position: 100% 0%; right: -30px;}
+
+.popupContainer .thePopup{width: 18em; margin-bottom: 1em; padding: .25em; background: #FFFFFF; border: 10px solid #1E8581; border-radius: 1em;}
+.popupContainer .daBackground{background: rgba(92, 205, 201, 0.5);}
+
+#whyMe_popup .thePopup{width: 20em;}
+
+form[name="contactMe"] .anInput{margin-bottom: 1em;}
+
+form[name="contactMe"] .anInput label{display: block;}
+	form[name="contactMe"] .anInput label:after{content: ": ";}
+
+form[name="contactMe"] .anInput input{display: block; width: 99%;}
+	form[name="contactMe"] .anInput input.good{border-color: green;}
+	form[name="contactMe"] .anInput input.error, form[name="contactMe"] .anInput textarea.error{border-color: #ff0000;}
+
+form[name=contactMe] canvas{width: 120px; height: 20px; display: block; margin: auto;}
+
+/* Portfolio */
+.portfolioItem{color: #000; text-align: center;}
+	.portfolioItem.olderWork{display: none;}
+		.show_olderWork .portfolioItem.olderWork{display: block;}
+
+	.portfolioItem p{display: block; border: .375em solid #FFCF72; border-radius: 1em; margin: 0px; margin-bottom: 1em;}
+		.portfolioItem p:hover{border-color: #1E8581;}
+
+	.portfolioItem img{width: 100%; border-radius: .5em;}
+
+/* Other */
+#simpleSizing{}
+	#simpleSizing a{color: #000; font-weight: bold; margin-left: .25em;}
+		#simpleSizing a:hover, #simpleSizing a.inUse{color: #fff;}
+
+		#simpleSizing a[option="1"]{font-size: 1.6rem;}
+			.fontSize1{font-size: 1.1em;}
+			
+		#simpleSizing a[option="2"]{font-size: 1.2rem;}
+			.fontSize2{font-size: 1em;}
+		
+		#simpleSizing a[option="3"]{font-size: .9rem;}
+			.fontSize3{font-size: .9em;}
+
+.swm{display: none;}
+
+#quickInfo p{margin: .5em 0em;}
+
+.clientComment{margin-bottom: 1em;}
+	.clientComment .said{font-size: 1.2em; margin-bottom: .25em;}
+		.clientComment .said:after, .clientComment .said:before{content: '"'; font-style: italic; font-weight: bold;}
+		
+	.clientComment .saidBy{font-size: .95em;}
+
+@media (max-width: 55em) {
+	.swm{display: block;}
+	
+	.hwm{display: none;}
+
+	.container{width: 90%; max-width: 20em;}
+		.container.deckOfCards{}
+			.deckOfCards .column{width: 100%;}
+			.deckOfCards .middleColumn{margin: 0px;}
+	
+	.viewingPopup .container{display: none;}
+		.defaultPopupIcon{width: 32px; height: 32px; margin: auto; margin-bottom: .25em; background: url("../images/x.png"); position: static; margin-top: 0px;}
+		.popupContainer .thePopup{position: static;}
+
+	.popupContainer .thePopup{width: 90%; max-width: 20em; margin: auto; margin-top: 1em; margin-bottom: 1em; border: 0px; border-radius: 0px;}
+	.popupContainer .daBackground{display: none;}
+}

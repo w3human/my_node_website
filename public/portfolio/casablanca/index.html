@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<title>The Casa Blanca Apartment</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+		<style>
+			@font-face {
+				font-family: 'england';
+				src: url('fonts/england.eot');
+				src: local('☺'), url('fonts/england.woff') format('woff'), url('fonts/england.ttf') format('truetype'), url('fonts/england.svg') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+			
+			body{font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; background: #9ca76d;}
+			
+			a{color: #0000FF; cursor: pointer;}
+			
+			#theWholeThing{width: 720px; padding: 20px; margin: auto; background: #F2F2E6;}
+				#casablanca_header{height: 150px; background-size: 100% 150px; border: 0px; text-align: left; font-family: england;}
+					#casablanca_header h1{font-size: 40px; font-weight: 500; padding: 50px 0px 0px 10px; margin: 0px;}		
+					
+				#menu{border-bottom: 2px solid #BFBC94; background: #D7D3A4; text-align: center; padding: 10px;}
+					#menu a{display: inline; color: #000; padding: 0px 4px; border-left: 1px solid; border-right: 1px solid; margin-left: -4px; cursor: pointer;} 
+					#menu a:first-child{border-left-width: 2px;}
+					#menu a:last-of-type{border-right-width: 2px;}
+					#menu a{border-color: #FFF;}
+					#menu a:hover{color: #FFF;}
+		</style>
+
+		<!-- Index And No Follow Links --> <meta name="robots" content="nofollow"> <meta http-equiv="googlebot" content="nofollow">
+	</head>
+
+	<body>
+		<div id="theWholeThing">
+			<div id="casablanca_header"><h1>Casa Blanca Apartments</h1></div>	
+		
+			<div id="menu"><a>Home</a> <a>Rooms &amp; Rates</a> <a>Reservation</a> <a>Day Trips &amp; Tours</a> <a>Photo Gallery</a> <a>Contact Us</a></div>
+		
+			<div id="sccs" style="margin-top: 10px;">
+				<div id="content" style="width: 480px; float: right; padding: 0px 10px; text-align: left; border-left: 2px solid #BFBC94;">
+					<img src="images/photo1.jpg" width="100%">
+					
+					<p style="margin-top: 6px;">Welcome to Casa Blanca Apartments a destination for families and groups which would like to stay longer in Costa Rica and have it as a base for all the activities in this vacation paradise which hotels can't offer. Our aparthotel will provide you with enjoyable stay, we have two full equipped kitchens with breakfast buffet. For your convenience, we also have two washers & dryers and garage for 6 cars. Our English speaking driver will pick you up from the airport and then drive you wherever you want, he does it for the last 10 years.</p>
+				
+					<p>Alajuela, Costa Rica is one of the most important cities of this country. The SJO international airport and it's proximity to San Jose,great night life, shopping, central location, unique shops and true traditional Costa Rican ambience make Alajuela a must for most tourists visiting Costa Rica.</p>
+				
+					<p>Shopping, gambling, dancing, eating in typical restaurants, or just relaxing in a place with all of the amenities are some of the attractions of Alajuela, Costa Rica. The central location makes possible to experience many locations and tours and return to each night to the same safe and comfortable place.</p>
+					
+					<img src="images/picOfAlajuela.jpg" width="100%">
+							
+					<p>Most people do not realize that the international airport is in Alajuela and not San Jose. Alajuela makes a more logical home base for most travellers than San Jose as it is much safer and much closer to the airport, beaches, volcanoes Arenal & Poas and most destinations than San Jose.</p>
+				</div>		
+		
+		
+				<div id="sidebar" style="width: 200px; float: left; padding: 0px 10px; margin-left: -2px;"><script type="text/javascript">for (iii=1; iii<=6; iii++) {document.write("<img src=\"images/photo" + iii + ".jpg\" width='100%' style='margin-bottom: 12px;'>");}</script></div>
+		
+				<div style="clear: both;"></div>
+			</div>	
+	
+			<div id="footer" style="border-top: 2px solid #BFBC94; text-align: center; margin-top: 10px; padding-top: 5px; word-wrap: break-word;">
+				Contact Information: Phone: (506) 2432-5676 | E-Mail: <a>casablancacr@live.com</a> |<br /><br />
+			
+				<a style="text-align: center;" href="javascript: window.scrollTo(0, 0);">Top Of The Page</a>	
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			document.getElementById("casablanca_header").style.backgroundImage="url(images/headerImages/0.jpg)";
+	
+			for (i=0; i<20; i++) {
+				var image=new Image(); 
+					image.src="images/headerImages/"+ i +".jpg";
+			}
+	
+			var cba_headerImageNum=0;
+	
+			var intervalID=window.setInterval(function() {
+				eval("cba_headerImageNum"+ ((cba_headerImageNum==19)?"=0":"+=1"));
+		
+				document.getElementById("casablanca_header").style.backgroundImage="url(images/headerImages/"+ cba_headerImageNum +".jpg)";
+			}, 4000);
+		</script>
+	</body>
+</html>
